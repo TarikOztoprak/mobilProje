@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 
-export default function DetailsScreen({route}) {
+export default function DetailsScreen({route, navigation}) {
     const {Adı, Yazar, Sayfa, Kapak, Sum, Yıl } = route.params;
     return (
         <View style= {styles.container}>
@@ -13,6 +13,7 @@ export default function DetailsScreen({route}) {
                 <Text>Sayfa Sayısı: {Sayfa}</Text>
                 <Text>Basım Yılı: {Yıl}</Text>
                 <Text>{Sum}</Text>
+               
             </View>
             
         </View>

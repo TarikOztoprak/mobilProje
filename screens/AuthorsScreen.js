@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import { StyleSheet, View, FlatList, Text, Image} from 'react-native'
 import { getFirestore } from "firebase/firestore"
 import { collection, query ,getDocs,} from "firebase/firestore";
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     },
     fltlist:{
         borderColor: 'silver',
-        borderSize: 3,
+        borderWidth: 3,
         padding: 10,
         borderWidth: 1,
         borderColor: 'silver',

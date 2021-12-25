@@ -3,6 +3,8 @@ import BooksScreen from './BooksScreen';
 import ProfileScreen from './ProfileScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AuthorScreen from './AuthorsScreen';
+
+
 import { FontAwesome5, Entypo } from '@expo/vector-icons';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
@@ -12,8 +14,8 @@ const Drawer = createDrawerNavigator();
 function DrawerScreen (){
     return(
         <Drawer.Navigator options={{ headerShown: false }} initialRouteName="Books">
-            <Drawer.Screen  name="Books" component={BooksScreen} />
-            <Drawer.Screen  name="Profile" component={ProfileScreen} />
+            <Drawer.Screen name="Books" component={BooksScreen} />
+            <Drawer.Screen name="Profile" component={ProfileScreen} />
         </Drawer.Navigator>
     )
 }

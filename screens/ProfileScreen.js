@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { auth } from '../firebase'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-
+import  PushNotification  from '../Notification'
 
 const ProfileScreen = () => {
 
@@ -18,10 +18,12 @@ const ProfileScreen = () => {
 
     return (
         <View style={styles.container}>
+             <PushNotification></PushNotification>
             <TouchableOpacity style={styles.button} onPress={handleSingOut}>
                 <Text style={styles.buttonText}>Sign Out</Text>
             </TouchableOpacity>
             <Text>Email: {auth.currentUser?.email}</Text>
+           
         </View>
     )
 }

@@ -65,7 +65,7 @@ async function sendPushNotification(expoPushToken) {
     to: expoPushToken,
     sound: 'default',
     title: 'Kütüphane',
-    body: 'Romanlara göz atın!',
+    body: 'Romanlara Göz Atın!',
     data: { someData: 'goes here' },
   };
 
