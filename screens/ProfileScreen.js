@@ -20,7 +20,7 @@ const ProfileScreen = () => {
         <View style={styles.container}>
              <PushNotification></PushNotification>
             <TouchableOpacity style={styles.button} onPress={handleSingOut}>
-                <Text style={styles.buttonText}>Sign Out</Text>
+                <Text style={styles.buttonText}>Çıkış Yap</Text>
             </TouchableOpacity>
             <Text>Email: {auth.currentUser?.email}</Text>
            

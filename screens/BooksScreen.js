@@ -31,7 +31,7 @@ const BooksScreen = ({navigation}) => {
                 keyExtractor={item => item.ISBN}
                 renderItem={({ item }) =>(
                     <TouchableOpacity style = {styles.fltlist} key = {item.ISBN}
-                    onPress={() => navigation.navigate('Details', {Adı: item.Adı, Yazar: item.Yazar, Sayfa: item.Sayfa,Kapak: item.Kapak, Sum: item.Sum, Yıl: item.Yıl})}
+                    onPress={() => navigation.navigate('Detaylar', {Adı: item.Adı, Yazar: item.Yazar, Sayfa: item.Sayfa,Kapak: item.Kapak, Sum: item.Sum, Yıl: item.Yıl})}
                     >
                         <Image style={styles.listImage} source={{uri: item.Kapak}}/>
                         <View style={styles.center}>

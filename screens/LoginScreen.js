@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Image} from 'react-native'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
 import { useNavigation } from '@react-navigation/native';
@@ -33,6 +33,7 @@ const LoginScreen = () => {
             style={styles.container}
             behavior="height"
         >
+            <Image style={styles.image} source={require('../assets/icon.png')}></Image>
             <View style={styles.inputContainer}>
                 <TextInput
                     placeholder="Email"
@@ -41,7 +42,7 @@ const LoginScreen = () => {
                     style={styles.input}
                 />
                 <TextInput
-                    placeholder="Password"
+                    placeholder="Şifre"
                     value={password}
                     onChangeText={text => setPassword(text)}
                     style={styles.input}
@@ -54,13 +55,13 @@ const LoginScreen = () => {
                     onPress={handleLogin}
                     style={styles.button}
                 >
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.buttonText}>Giriş</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={handleSignUp}
                     style={[styles.button, styles.buttonOutline]}
                 >
-                    <Text style={styles.buttonOutlineText}>Register</Text>
+                    <Text style={styles.buttonOutlineText}>Kayıt Ol</Text>
                 </TouchableOpacity>
             </View>
         </KeyboardAvoidingView>
@@ -114,6 +115,10 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         fontSize: 16,
     },
+    image:{
+        width: 200,
+        height: 200
+    }
 
 
 })
